@@ -6,7 +6,7 @@
 </head>
 <body>
 	
-
+    <script src="script.js"></script> 
 	<script type="text/javascript">
 		  const money = prompt("Ваш бюджет на месяц?");
 		  const times = prompt("Введите дату в формате YYYY-MM-DD");
@@ -23,8 +23,10 @@
       	savings : false
       };
       console.log("a : " + money + " b : " + times);
-      console.log(appData.Omoney + " " + appData.Otimes  + " " + appData.expenses.expense_item);
-	  alert( "Ваш бюджет на день: " + (money - cost_item) / 30 + " руб." )
+	  console.log(appData.Omoney + " " + appData.Otimes  + " " + appData.expenses.expense_item);
+	  let money_at_one_day =  (money - cost_item) / 30 ;
+	  let money_at_one_day2 =  money_at_one_day.toFixed(0);
+	  alert( "Ваш бюджет на день: " + money_at_one_day2 + " руб." )
 	</script>
 </body>
 </html>
